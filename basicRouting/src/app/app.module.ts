@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule,Routes } from '@angular/router';
 
@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // samee Routes xarafka hoe kabital xusuuso
 const route: Routes = [
-  {path: '' , component: HomeComponent},
+  {path: '' , redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'aboute', component: AbouteComponent},
   {path: 'contact', component: ContactComponent},
