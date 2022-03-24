@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { AbouteComponent } from './aboute/aboute.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import { PathNotFoundComponentComponent } from './path-not-found-component/path-not-found-component.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // samee Routes xarafka hoe kabital xusuuso
 const route: Routes = [
   {path: '' , component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'aboute', component: AbouteComponent},
   {path: 'contact', component: ContactComponent},
-  { path: '**', component: PathNotFoundComponentComponent },
+  { path: '**', component: PageNotFoundComponent},
 ];
 
 @NgModule({
@@ -22,7 +22,7 @@ const route: Routes = [
     AbouteComponent,
     ContactComponent,
     HomeComponent,
-    PathNotFoundComponentComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
