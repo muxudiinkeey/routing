@@ -1,0 +1,2 @@
+# routing
+ waa Angular routing
