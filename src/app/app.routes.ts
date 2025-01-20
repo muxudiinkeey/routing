@@ -5,6 +5,14 @@ import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'contact',
+loadComponent:() => import('./contact/contact.component')
+.then(c => c.ContactComponent)
+
+},
+  { path: 'about',
+     loadComponent:() => import('./about/about.component')
+     .then(c => c.AboutComponent )
+
+      }
 ];
