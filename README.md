@@ -6,3 +6,6 @@
 3 ngOnInit consol.log (this.sctvatedRoute.snapshot.params.username)
 4 this.activatedRoute.params.subscribe(params=>{ console.log(params)}
 5.this.activatedRoute.queryParams.subscribe(queryParams=>{ console.log(queryParams)}
+----------------------
+a fiirso halkan
+https://www.youtube.com/watch?v=8xKaiatrzBI
