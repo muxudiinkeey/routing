@@ -12,5 +12,11 @@ loadComponent:() => import('./contact/contact.component')
      loadComponent:() => import('./about/about.component')
      .then(c => c.AboutComponent )
 
+      },
+
+  { path: 'users',
+     loadComponent:() => import('./users/users.component')
+     .then(c => c.UsersComponent )
+
       }
 ];
