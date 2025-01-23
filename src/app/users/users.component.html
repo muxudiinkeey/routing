@@ -1,4 +1,4 @@
- <section class="app-users">
+<!--  <section class="app-users">
   <h1>users</h1>
 
   <ul>
@@ -14,3 +14,29 @@
   </ul>
   </section>
 
+ -->
+
+
+<div class="container mt-3">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(user of users; track user){
+      <tr>
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.username}}</td>
+      </tr>
+    }
+    </tbody>
+  </table>
+</div>
