@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { UserComponent } from './user/user.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,9 +20,11 @@ loadComponent:() => import('./contact/contact.component')
      .then(c => c.UsersComponent )
 
       },
-  { path: 'userList',
-     loadComponent:() => import('./user-list/user-list.component')
-     .then(c => c.UserListComponent )
+  
+    { path: 'user/:id',
+       loadComponent:() => import('./user/user.component')
+       .then(c => c.UserComponent)
 
-      }
+       },
+
 ];

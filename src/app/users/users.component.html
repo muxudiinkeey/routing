@@ -31,10 +31,10 @@
     <tbody>
       @for(user of users; track user){
       <tr>
-        <td>{{user.id}}</td>
+        <td><a [routerLink]="['/user', user.id]">{{user.id}}</a></td>
         <td>{{user.name}}</td>
         <td>{{user.username}}</td>
-        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
       </tr>
     }
     </tbody>
