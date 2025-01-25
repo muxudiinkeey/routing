@@ -13,11 +13,18 @@ id: string | null = '';
 
 constructor(private router: ActivatedRoute){}
 ngOnInit(){
+  //params snapshot
 // this.id = this.router.snapshot.paramMap.get('id')
-// isticmaal params subscribe
-this.router.params.subscribe(params =>{
-  this.id = params ['id']
-})
+//  params subscribe
+/* this.router.params.subscribe(params =>{
+  this.id = params ['id']; */
+
+  // Qoery params
+
+  this.router.queryParams.subscribe(queryParams =>{
+    console.log(queryParams)
+  })
+}
 }
 
-}
+
