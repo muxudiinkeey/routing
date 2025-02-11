@@ -6,6 +6,7 @@ import { UserComponent } from './user/user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
+    { path: '',   redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'aboute', component: AbouteComponent},
     { path: 'contact', component: ContactComponent},
