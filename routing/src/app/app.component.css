@@ -1,0 +1,24 @@
+
+nav {
+    width: 95%;
+    margin: auto;
+}
+
+
+a {
+    color: aliceblue;
+    font-size: xx-large;
+    
+}
+.main{
+    background-color: rgb(243, 241, 239);
+    height: 100%;
+    width: 95%;
+    
+    margin: auto;
+    text-align: center;
+    font-weight: 800;
+    color: blue;
+    font-size: xx-large;
+}
+
