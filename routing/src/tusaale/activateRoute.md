@@ -1,15 +1,44 @@
-import { CommonModule } from '@angular/common';
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink} from '@angular/router';
-import { Subscription } from 'rxjs';
+
+```text
+snapshot ma badalayo root url
+```
+
+```html
+<div class="container">
+    <div class="center " style="background-color: lightblue; ">
+
+ <h2 class="text-center"> user ID:{{user.userId}}</h2>
+ <h2 class="text-center"> user name:{{user.userName}}</h2>
+</div>
+    
+</div>
+```
+----------------
+```typescript
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterLink],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit, OnDestroy{
+export class HomeComponent {
+  route = inject (ActivatedRoute)
+
+
+  user!: { userId: string ,userName: string; } 
+
+  ngOnInit(){
+     this.user = {
+      userId: this.route.snapshot.params['id'],
+      userName: this.route.snapshot.params['name']
+     } 
+  }
+}
+```
+```typescript
   route = inject (ActivatedRoute)
 changeId:any;
 changeName:any;
@@ -43,4 +72,4 @@ subcription!: Subscription
          this.subcription.unsubscribe();
      }
   }
-
+  ```
