@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  route = inject (ActivatedRoute)
 
+
+  user!: { userId: string; userName: string; } 
+
+  ngOnInit(){
+     this.user = {
+      userId: this.route.snapshot.params['id'],
+      userName: this.route.snapshot.params['name']
+     } 
+  }
 }
