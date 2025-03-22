@@ -11,7 +11,7 @@ export class HomeComponent {
   route = inject (ActivatedRoute)
 
 
-  user!: { userId: string; userName: string; } 
+  user!: { userId: string ,userName: string; } 
 
   ngOnInit(){
      this.user = {
